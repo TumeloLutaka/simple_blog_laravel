@@ -1,0 +1,93 @@
+/* ==========================================================================
+   Profile Styles: Two-Column Layout (My Posts + User Details & Delete) (BEM)
+   ========================================================================== */
+
+/* Block: .profile */
+.profile {
+    display: grid;
+    grid-template-columns: 1fr 320px;
+    gap: 1.75rem;
+    align-items: start;
+}
+
+@media (max-width: 768px) {
+    .profile {
+        grid-template-columns: 1fr;
+    }
+}
+
+.profile__posts-col {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.profile__details-col {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.profile__card {
+    background-color: var(--bg-light);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.profile__card--danger {
+    border-color: rgb(from var(--danger) r g b / 0.4);
+    background-color: rgb(from var(--danger) r g b / 0.04);
+}
+
+.profile__title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--text-main);
+}
+
+.profile__subtitle {
+    font-size: 0.875rem;
+    color: var(--text-muted);
+}
+
+.profile__info-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.profile__info-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+    padding-bottom: 0.65rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.profile__info-item:last-child {
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.profile__info-label {
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    font-weight: 600;
+    color: var(--text-muted);
+}
+
+.profile__info-value {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text-main);
+}
+
+.profile__danger-text {
+    font-size: 0.875rem;
+    color: var(--text-muted);
+}
