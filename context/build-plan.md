@@ -36,14 +36,10 @@ Transform the foundational Laravel blog tutorial into a clean, portfolio-ready a
   - **Column 1 (`.profile__posts-col`)**: Create a New Post form + list of the authenticated user's own posts with Read, Edit, and Delete controls.
   - **Column 2 (`.profile__details-col`)**: Displays Username, Email, Member Since date, Total Posts count, and the **Delete User** button (`DELETE /profile`) that deletes the user's posts and account.
 
----
-
-## Upcoming / Deferred Items (To Return To)
-
-### Phase 5: Render Deployment & Database Seeder Prep
+### Phase 5: Render Deployment & Database Seeder Prep (Completed)
 1. **Demo Database Seeder (`DatabaseSeeder`)**:
-   - Create a seeder that populates a demo user account and sample blog posts (`php artisan migrate --force --seed` on startup).
+   - Updated `database/seeders/DatabaseSeeder.php` with idempotent `firstOrCreate` seeding for demo user accounts (`demouser` / `password123` and `alexwriter` / `password123`) and 3 sample blog posts.
    - Ensures that even if Render's free web service tier spins down and resets the ephemeral SQLite database, portfolio visitors always have sample posts and a demo login ready to explore.
 2. **Render Environment & Start Configuration**:
-   - Configure production environment variables (`APP_KEY`, `APP_ENV=production`, `APP_DEBUG=false`, `DB_CONNECTION=sqlite` or PostgreSQL URL).
-   - Add Render build/start script or `Dockerfile` for seamless GitHub-to-Render deployment.
+   - Updated `app/Providers/AppServiceProvider.php` to force HTTPS URLs in production (`URL::forceScheme('https')`).
+   - Added `Dockerfile` (PHP 8.4 + Apache with SQLite & PostgreSQL extensions), `scripts/render-start.sh`, `.dockerignore`, and `render.yaml` Blueprint for seamless GitHub-to-Render deployment.

@@ -37,3 +37,8 @@ All notable changes, decisions, and milestones for the project are recorded here
   - Recorded **Phase 5 (Render Deployment & Database Seeder Prep)** in `context/build-plan.md` for future implementation.
   - Replaced default `README.md` with project-specific documentation.
   - Initialized Git repository (`git init`), added remote `origin` (`https://github.com/TumeloLutaka/simple_blog_laravel.git`), committed project files on `main`, and pushed to GitHub.
+- **Completed Phase 5 (Render Deployment & Database Seeder Prep)**:
+  - Updated `app/Providers/AppServiceProvider.php` to force HTTPS scheme in production (`URL::forceScheme('https')`) behind Render's reverse proxy.
+  - Updated `database/seeders/DatabaseSeeder.php` using `firstOrCreate` to seed demo accounts (`demouser` / `password123` and `alexwriter` / `password123`) and three sample blog posts on startup.
+  - Created `Dockerfile` (`php:8.4-apache` with `pdo_sqlite` and `pdo_pgsql`), `scripts/render-start.sh`, `.dockerignore`, and `render.yaml` Blueprint for Render deployment.
+  - Updated `README.md` and `context/build-plan.md` with demo credentials and Render deployment instructions.

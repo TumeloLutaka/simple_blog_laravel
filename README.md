@@ -50,3 +50,23 @@ A clean, beginner-to-intermediate **Laravel** blog application built as a portfo
    php artisan serve
    ```
    Visit `http://127.0.0.1:8000` in your browser.
+
+---
+
+## Demo Account (Seeded Automatically)
+
+Running `php artisan db:seed` (or `php artisan migrate --seed`) populates two demo authors and sample blog posts:
+
+- **Username**: `demouser`
+- **Password**: `password123`
+
+---
+
+## Deploying to Render
+
+This repository includes a production [Dockerfile](Dockerfile), startup script ([scripts/render-start.sh](scripts/render-start.sh)), and Render Blueprint ([render.yaml](render.yaml)).
+
+1. Push the repository to **GitHub**.
+2. In the **Render Dashboard**, click **New +** &rarr; **Blueprint** (to use `render.yaml` automatically) or **New +** &rarr; **Web Service** (select **Docker** as the runtime).
+3. Set `APP_KEY` in the Render **Environment Variables** tab (generate one locally with `php artisan key:generate --show`, e.g., `base64:...`).
+4. By default, the container uses **SQLite** and runs `php artisan migrate --force --seed` on startup so demo posts and login credentials are always ready—even after free-tier spin-downs. To use **Render PostgreSQL** instead, set `DB_CONNECTION=pgsql` and `DB_URL=<Internal Database URL>`.
