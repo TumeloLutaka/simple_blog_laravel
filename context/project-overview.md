@@ -27,3 +27,4 @@ A clean, beginner-to-intermediate Laravel blog application designed as a portfol
 
 ## Hosting Target
 - **Render**: Selected for GitHub-connected deployment (supporting PHP/Laravel runtime and database persistence).
+- **Live URL**: [https://simple-blog-laravel.onrender.com/](https://simple-blog-laravel.onrender.com/)

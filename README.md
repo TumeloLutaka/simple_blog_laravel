@@ -2,6 +2,9 @@
 
 A clean, beginner-to-intermediate **Laravel** blog application built as a portfolio project and code reference. It demonstrates core Laravel MVC fundamentals—routing, controllers, session authentication, Eloquent relationships, and Blade components—paired with modular vanilla CSS following the **BEM (`block__element--modifier`)** naming convention.
 
+**Live Demo:** [https://simple-blog-laravel.onrender.com/](https://simple-blog-laravel.onrender.com/)  
+*(Demo Login — Username: `demouser` | Password: `password123`)*
+
 ---
 
 ## Features
@@ -29,8 +32,8 @@ A clean, beginner-to-intermediate **Laravel** blog application built as a portfo
 
 1. **Clone the repository**
    ```bash
-   git clone <your-repo-url>
-   cd simple-blog
+   git clone https://github.com/TumeloLutaka/simple_blog_laravel.git
+   cd simple_blog_laravel
    ```
 
 2. **Install PHP dependencies**

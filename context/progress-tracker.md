@@ -42,3 +42,6 @@ All notable changes, decisions, and milestones for the project are recorded here
   - Updated `database/seeders/DatabaseSeeder.php` using `firstOrCreate` to seed demo accounts (`demouser` / `password123` and `alexwriter` / `password123`) and three sample blog posts on startup.
   - Created `Dockerfile` (`php:8.4-apache` with `pdo_sqlite` and `pdo_pgsql`), `scripts/render-start.sh`, `.dockerignore`, and `render.yaml` Blueprint for Render deployment.
   - Updated `README.md` and `context/build-plan.md` with demo credentials and Render deployment instructions.
+- **Verified Live Render Deployment & Finalized Project**:
+  - Verified live production deployment at `https://simple-blog-laravel.onrender.com/`.
+  - Added the live demo link and repository URL to `README.md` and `context/project-overview.md` to close out the project.
